@@ -25,25 +25,22 @@ const loadGithubUser = async (userName) => {
   const res = await fetch(url);
   const data = await res.json();
   showUserCard(data);
+  // if (userName.login !== null) {
+
+  // }
+  // else {
+  //   Swal.fire({
+  //     text: 'Wrong username',
+  //     icon: 'error',
+  //   })
+  // }
 }
 
-// if (userData.length == 0) {
-//   Swal.fire({
-//     text: 'Wrong username',
-//     icon: 'error',
-//   })
-// }
 
-// const displayError = () => {
-//   Swal.fire({
-//     text: 'Wrong username',
-//     icon: 'error',
-//   })
-// }
 
 const showUserCard = async (userData) => {
   const cardContainer = document.getElementById('card-container');
-  // console.log(userData);
+  console.log(userData);
   cardContainer.innerHTML = `
     <div
     class="card bg-white flex flex-col items-center justify-center p-4 drop-shadow-md rounded-2xl w-80 mx-auto"
