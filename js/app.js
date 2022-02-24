@@ -76,11 +76,11 @@ const showUserCard = async (userData) => {
     </div>
     <!--Creation time-->
     <div class="work text-gray-700 mt-4">
-      <p>Created at</p>
-      <p>${userData.created_at.slice(0, 10)}</p>
+      <p class="mt-2">Created at: ${userData.created_at.slice(0, 10)}</p>
+      <p>Updated at: ${userData.updated_at.slice(0, 10)}</p>
     </div>
     <!-- follow button -->
-    <div class="w-full mt-8">
+    <div class="w-52 mt-8">
     <a target="_blank" href="${userData.html_url}">
       <button
         class="bg-blue-500 py-2 px-4 hover:bg-blue-600 text-white w-full font-semibold rounded-lg shadow-lg"
