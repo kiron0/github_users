@@ -27,7 +27,7 @@ const loadGithubUser = async (userName) => {
   showUserCard(data);
   if (data.id == undefined) {
     Swal.fire({
-      text: 'Wrong username',
+      text: 'Wrong username, please check again',
       icon: 'error',
     })
   }
