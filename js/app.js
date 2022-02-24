@@ -75,9 +75,9 @@ const showUserCard = async (userData) => {
       <p class="text-center">Follower <br/> <span class="font-bold">${userData.followers}</span></p>
     </div>
     <!--Creation time-->
-    <div class="work text-gray-700 mt-4">
-      <p class="mt-2">Created at: ${userData.created_at.slice(0, 10)}</p>
-      <p>Updated at: ${userData.updated_at.slice(0, 10)}</p>
+    <div class="work text-gray-700 mt-6">
+      <p>Created at: ${userData.created_at.slice(0, 10)}</p>
+      <p class="mt-1">Updated at: ${userData.updated_at.slice(0, 10)}</p>
     </div>
     <!-- follow button -->
     <div class="w-52 mt-8">
