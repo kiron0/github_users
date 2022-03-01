@@ -55,7 +55,7 @@ const showUserCard = async (userData) => {
     </div>
     <!--name-->
     <div class="name text-gray-800 text-2xl font-medium mt-4">
-      <p>${userData.name}</p>
+      <p>${userData.name ? userData.name : "name not defind"}</p>
     </div>
     <!--username-->
     <div class="username text-gray-500">
@@ -63,11 +63,11 @@ const showUserCard = async (userData) => {
     </div>
     <!--Live in-->
     <div class="work text-gray-700 mt-2">
-      <p>${userData.location}</p>
+      <p>${userData.location ? userData.location : "location not defind"}</p>
     </div>
     <!--work-->
     <div class="work text-gray-700 mt-4">
-      <p>${userData.bio}</p>
+      <p>${userData.bio ? userData.bio : "bio not defind"}</p>
     </div>
     <!--work-->
     <div class="w-full work text-gray-700 mt-4 flex justify-around">
@@ -83,7 +83,7 @@ const showUserCard = async (userData) => {
     <div class="w-52 mt-8">
     <a target="_blank" href="${userData.html_url}">
       <button
-        class="bg-blue-500 py-2 px-4 hover:bg-blue-600 text-white w-full font-semibold rounded-lg shadow-lg"
+        class="bg-black py-2 px-4 hover:bg-slate-700 text-white w-full font-semibold rounded-lg shadow-lg"
       >
         Follow
       </button>
