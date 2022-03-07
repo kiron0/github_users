@@ -43,7 +43,7 @@ const showUserCard = async (userData) => {
   console.log(userData);
   cardContainer.innerHTML = `
     <div
-    class="card bg-white flex flex-col items-center justify-center p-4 drop-shadow-md rounded-2xl w-80 mx-auto"
+    class="card flex flex-col items-center justify-center p-4 drop-shadow-md rounded-2xl w-80 mx-auto"
   >
     
     <div class="profile mx-auto rounded-full py-2 w-24">
