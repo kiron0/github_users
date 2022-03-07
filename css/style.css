@@ -76,7 +76,7 @@ input[type="text"] {
   cursor: pointer;
   box-shadow: var(--box-shadow);
   text-align: center;
-  color:var(--black);
+  color:var(--white);
   background: var(--bg-color);
 }
 

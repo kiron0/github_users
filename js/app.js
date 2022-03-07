@@ -43,7 +43,7 @@ const showUserCard = async (userData) => {
   console.log(userData);
   cardContainer.innerHTML = `
     <div
-    class="card flex flex-col items-center justify-center p-4 drop-shadow-md rounded-2xl w-80 mx-auto"
+    class="card flex flex-col items-center justify-center p-4 rounded-2xl w-80 mx-auto"
   >
     
     <div class="profile mx-auto rounded-full py-2 w-24">
@@ -80,10 +80,10 @@ const showUserCard = async (userData) => {
       <p class="mt-1">Updated at: ${userData.updated_at.slice(0, 10)}</p>
     </div>
     <!-- follow button -->
-    <div class="w-52 mt-8">
+    <div class="w-52 mt-8 mb-4">
     <a target="_blank" href="${userData.html_url}">
       <button
-        class="py-2 px-4 text-white w-full font-semibold rounded-lg shadow-lg"
+        class="py-2 px-4 w-full font-semibold rounded-lg shadow-lg"
       >
         Follow
       </button>
