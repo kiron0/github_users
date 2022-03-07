@@ -83,7 +83,7 @@ const showUserCard = async (userData) => {
     <div class="w-52 mt-8">
     <a target="_blank" href="${userData.html_url}">
       <button
-        class="bg-black py-2 px-4 hover:bg-slate-700 text-white w-full font-semibold rounded-lg shadow-lg"
+        class="py-2 px-4 text-white w-full font-semibold rounded-lg shadow-lg"
       >
         Follow
       </button>
@@ -91,6 +91,17 @@ const showUserCard = async (userData) => {
     </div>
   </div>
     `;
+}
+
+let themeToggler = document.querySelector('#theme-toggler');
+
+themeToggler.onclick = () => {
+  themeToggler.classList.toggle('fa-sun');
+  if (themeToggler.classList.contains('fa-sun')) {
+    document.body.classList.add('active');
+  } else {
+    document.body.classList.remove('active');
+  }
 }
 
 /* 

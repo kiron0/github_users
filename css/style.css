@@ -1,8 +1,109 @@
+:root{
+  --white:#444;
+  --bg-color:#e6e6e6;
+  --border:.1rem solid rgb(0, 0, 0);
+  --box-shadow:.4rem .4rem 1rem #ccc,
+              -.4rem -.4rem 1rem #fff;
+  --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
+                    -.4rem -.4rem 1rem #fff inset;
+}
+
+body {
+  overflow: hidden;
+  background-color: var(--bg-color);
+}
+
+body.active{
+  --white:#fff;
+  --light-color:#ddd;
+  --bg-color:#222;
+  --border:.1rem solid #fff;
+  --box-shadow:.4rem .4rem 1rem #111,
+              -.4rem -.4rem 1rem #333;
+  --box-shadow-inset:.4rem .4rem 1rem #111 inset,
+                    -.4rem -.4rem 1rem #333 inset;
+}
+
+#search-input{
+  color: var(--white);
+  background: var(--bg-color);
+  box-shadow: var(--box-shadow-inset);
+  border-radius: 10px;
+}
+
+.fa-search{
+  color: var(--white);
+}
+
 .card {
-    box-shadow: 2px 2px 10px rgb(236, 236, 236);
-    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+    background: var(--bg-color);
+    box-shadow: var(--box-shadow);
+}
+
+.card img{
+  border: var(--border);
+}
+
+.card p{
+  color: var(--white);
+}
+
+.card button{
+    color: var(--white);
+    background: var(--bg-color);
+    box-shadow: var(--box-shadow);
+}
+.card button:hover{
+    box-shadow: var(--box-shadow-inset);
 }
 
 input[type="text"] {
   text-transform: lowercase;
+}
+
+#card-container{
+  margin-top: -6rem;
+}
+
+#theme-toggler{
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  color:var(--black);
+  background: var(--bg-color);
+}
+
+#theme-toggler:hover{
+  color: var(--white);
+  box-shadow: var(--box-shadow-inset);
+}
+
+/*----------------------- Responsive Breakpoints ---------------------------*/
+@media screen and (max-width: 490px) {
+  .main{
+    height: 25vh;
+    margin-top: 1.3rem;
+  }
+
+  #card-container{
+    margin-top: -1.5rem;
+  }
+
+  #theme-toggler{
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main{
+    height: 40vh;
+  }
 }

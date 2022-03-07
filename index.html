@@ -15,7 +15,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/35eaa9d67f.js" crossorigin="anonymous"></script>
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   
   <script>
     tailwind.config = {
       theme: {
@@ -32,23 +34,27 @@
   </script>
 </head>
 
-<body class="font-poppins bg-white-200">
+<body class="font-poppins">
   <!-- main - parent div -->
-  <main class="main grid place-items-center content-evenly h-[75vh]">
-    <div class="relative w-4/5 sm:w-80">
-      <input id="search-input" type="text"
-        class="h-14 w-full pr-8 pl-5 rounded z-0 drop-shadow focus:outline-none text-gray-500"
-        placeholder="Type your github username..." />
-      <div id="search-btn" class="absolute top-0 right-0 w-16 h-full group hover:bg-gray-100 cursor-pointer rounded-r"
-        onclick="getInput()">
-        <div class="h-full grid place-items-center">
-          <i class="fa fa-search text-gray-400 z-20 group-hover:text-gray-500"></i>
+  <main>
+
+    <!-- theme toggler  -->
+    <div id="theme-toggler" class="fas fa-moon"></div>
+
+    <div class="main grid place-items-center content-evenly">
+      <div class="relative w-4/5 sm:w-80 lg:w-[30rem]">
+        <input id="search-input" type="text" class="h-14 w-full pr-8 pl-5 z-0 focus:outline-none text-gray-500"
+          placeholder="Type your github username..." />
+        <div id="search-btn" class="absolute top-0 right-0 w-16 h-full group cursor-pointer rounded-r"
+          onclick="getInput()">
+          <div class="h-full grid place-items-center">
+            <i class="fa fa-search z-20 text-gray-500"></i>
+          </div>
         </div>
       </div>
     </div>
     <!--card-->
-
-    <div id="card-container" class="mt-4"></div>
+    <div id="card-container" class="mt-0"></div>
   </main>
   <script src="sweetalert2.all.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
